@@ -27,6 +27,7 @@ class Student{
     }
     int getAge(){
         return age;
+        
     }
 
     void setGrade(char g){
