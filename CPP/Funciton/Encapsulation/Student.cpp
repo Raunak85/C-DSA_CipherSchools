@@ -27,7 +27,7 @@ class Student{
     }
     int getAge(){
         return age;
-        
+
     }
 
     void setGrade(char g){
@@ -42,13 +42,36 @@ class Student{
 };
 
 int main(){
-    Student s;
-    s.setName("Raunak");
-    s.setRollNo(34);
-    s.setAge(23);
-    s.setGrade('A');
-    cout<<"Name of student = "<<s.getName()<<endl;
-    cout<<"Roll no of student = "<<s.getRollNo()<<endl;
-    cout<<"Age of student = "<<s.getAge()<<endl;
-    cout<<"Grade of student = "<<s.getGrade()<<endl;
+    Student s[3];
+    string name;
+    int rollno,age;
+    char grade;
+    for (int i = 0; i < 3; i++)
+    {
+        cout<<"--------Enter student Details "<<i<<"--------"<<endl;
+        cout<<"Enter Your Name"<<endl;
+        cin>>name;
+        s[i].setName(name);
+        cout<<"Enter Your Roll number"<<endl;
+        cin>>rollno;
+        s[i].setRollNo(rollno);
+        cout<<"Enter Your Age"<<endl;
+        cin>>age;
+        s[i].setAge(age);
+        cout<<"Enter Your Grade"<<endl;
+        cin>>grade;
+        s[i].setGrade(grade);
+    }
+
+    for (int i = 0; i < 3; i++)
+    {
+        cout<<"----------------------------"<<endl;
+        cout<<"Name of student = "<<s[i].getName()<<endl;
+        cout<<"Roll no of student = "<<s[i].getRollNo()<<endl;
+        cout<<"Age of student = "<<s[i].getAge()<<endl;
+        cout<<"Grade of student = "<<s[i].getGrade()<<endl;
+    }
+    
+   
+    
 }
