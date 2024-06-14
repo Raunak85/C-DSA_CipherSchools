@@ -6,6 +6,7 @@ class Base {
         cout<<"Base";
     }
 };
+
 class Child : public Base {
     public:
     void print(){
@@ -14,6 +15,7 @@ class Child : public Base {
 };
 
 int main(){
+
     // Child c;
     // c.print(); -- Child
     // Base b;
@@ -22,6 +24,7 @@ int main(){
     // c.Base::print(); -- Base;
     Child c;
     Base* ptr=&c;
+
     ptr->print();
 
 }
