@@ -16,6 +16,7 @@ class Dog : public Animal{
     public:
     void speak(){
         cout<<"------barking------"<<endl;
+        cout<<ear<<"------barking------"<<endl;
     }
 };
 
