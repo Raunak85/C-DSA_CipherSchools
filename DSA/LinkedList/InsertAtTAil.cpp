@@ -29,6 +29,22 @@ void insertAtTail(Node* &head,int val){
     temp->next = newNode;
     
 }
+
+bool search(Node* head,int key){
+    Node* temp=head;
+    bool flag = false;
+    while (head->next != NULL)
+    {
+        if(head->data == key){
+            
+            return true;
+        }
+        head = head->next ;
+    }
+    return false;
+
+}
+
 void display(Node* head){
     while(head != NULL){
        
@@ -42,5 +58,11 @@ int main(){
     insertAtTail(head,3);
     insertAtTail(head,5);
     insertAtTail(head,8);
-    display(head);
+    // display(head);
+    bool flag = search(head,5);
+    if(flag){
+        cout<<"present";
+    }else{
+        cout<<"not";
+    }
 }
