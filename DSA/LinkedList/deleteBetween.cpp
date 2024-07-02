@@ -49,6 +49,7 @@ void display(Node* head){
         head = head->next;
     }
     cout<<endl;
+    sz
 }
 
 int main(){
