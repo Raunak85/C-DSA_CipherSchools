@@ -40,7 +40,7 @@ void display(Node* head){
     
 }
 
-// two pointer approach to find mid;
+// two pointer approach to find mid; // second method
 
 Node* findMiddle(Node* &head){
     Node* slow = head;
@@ -53,7 +53,7 @@ Node* findMiddle(Node* &head){
     return slow;
     
 }
-
+ // first method
 void deleteMiddle(Node* &head){
     Node* temp = head;
     int count = 1;
