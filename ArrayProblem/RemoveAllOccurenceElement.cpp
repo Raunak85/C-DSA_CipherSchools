@@ -2,18 +2,17 @@
 using namespace std;
 
 void RemoveOccurence(int arr[],int n,int key){
-    int indx=-1;
+    int indx=0;
     for(int i=0;i<n;i++){
-        if(arr[i] == key){
-            continue;
-        }
-        arr[++indx] = arr[i];
+       if(arr[i] != key){
+        arr[indx++] = arr[i];
+       }
     }
-    for(int i=0;i<n;i++){
-        if(arr[i] == key){
-            arr[i] = 0;
-        }
+    while (indx<n)
+    {
+        arr[indx++] = 0;
     }
+    
 }
 
 int main(){
