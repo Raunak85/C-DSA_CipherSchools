@@ -1,4 +1,4 @@
-// find distinct value from the array
+// find distinct value from the array and assign that value to Array 
 #include<iostream>
 using namespace std;
 int main(){
