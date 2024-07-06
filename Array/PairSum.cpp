@@ -1,24 +1,29 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
-int main(){
-    int arr[] = {3,2,5,10,1,2,7};
-    int target=9;
-    int n=sizeof(arr)/sizeof(arr[0]);
-    int flag =0;
-    for(int i=0;i<n;i++){
-        for(int j=i+1;j<n;j++){
+
+int main() {
+    int arr[] = {3, 1, 5, 10, 0, 2, 7};
+    int target = 9;
+    int n = sizeof(arr) / sizeof(arr[0]);
+    bool pairExists = false;
+
+    for (int i = 0; i < n; i++) {
+        for (int j = i + 1; j < n; j++) {
             int sum = arr[i] + arr[j];
-            if(sum == target){
-                flag++;
-                cout<<"Yes! sum pair exists";
-                break;;
+            if (sum == target) {
+                pairExists = true;
+                cout << "Yes! Sum pair exists: (" << arr[i] << ", " << arr[j] << ")\n";
+                break;
             }
         }
-        if(flag == 1){
+        if (pairExists) {
             break;
         }
     }
-    if(flag == 0){
-         cout<<"No! sum pair not exists";
+
+    if (!pairExists) {
+        cout << "No! Sum pair does not exist\n";
     }
+
+    return 0;
 }
