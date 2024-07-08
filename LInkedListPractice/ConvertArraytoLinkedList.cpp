@@ -1,3 +1,5 @@
+//Convert Array to LinkedList 
+
 #include<iostream>
 using namespace std;
 
@@ -23,7 +25,6 @@ void insertNode(Node* &head,int val){
         temp = temp->next;
     }
     temp->next = newNode;
-
 }
 void display(Node* head){
     Node* temp = head;
