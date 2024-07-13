@@ -39,6 +39,9 @@ bool isBalance(string s)
             {
                 st.pop();
             }
+            else{
+                return false;
+            }
         }
         else
         {
@@ -49,9 +52,9 @@ bool isBalance(string s)
     
 }
 
-int main()
+int main()  
 {
-    string s = "{([])}]";
+    string s = "{([])}";
     if (isBalance(s))
     {
         cout << "Balanced";
