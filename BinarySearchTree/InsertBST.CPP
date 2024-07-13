@@ -32,6 +32,47 @@ void inOrderTrav(Node* root){
     cout<<root->data<<" ";
     inOrderTrav(root->right);
 }
+        // recursivaly call
+// bool searchKey(Node* root,int key){
+//     if(root == nullptr){
+//         return false;
+//     }
+//     if(key == root->data){
+//         return true;
+//     }
+//     if(key < root->data){
+//        searchKey(root->left,key);
+//     }
+//     else{
+//         searchKey(root->right,key);
+//     }
+
+// }
+
+        // iterative call for searching 
+Node* searchingInBST(Node* root,int key){
+    Node* temp = root;
+    if(temp == nullptr) return nullptr;
+
+    if(key < temp->data){
+        while (temp->left != nullptr)
+        {
+            
+        }
+        
+    }
+}
+
+Node* findMinInBST(Node* root){
+    if(root == nullptr) return nullptr;
+    Node* temp = root;
+    while (temp->left != nullptr)
+    {
+        temp = temp->left;
+    }
+    return temp;
+    
+}
 
 int main(){
     Node* root = nullptr;
@@ -42,5 +83,9 @@ int main(){
     insertBST(root,2);
     insertBST(root,7);
     inOrderTrav(root);
+    cout<<endl;
+    // cout<<searchKey(root,9);
+    Node* temp = findMinInBST(root);
+    cout<<temp->data;
 
 }
