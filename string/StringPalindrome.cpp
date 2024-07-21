@@ -17,7 +17,7 @@ bool CheckPalindrome(string str){
         }
        
         if(str[i] != str[j]){
-            flag = false;
+            return false;
             break;
         }
         i++;
